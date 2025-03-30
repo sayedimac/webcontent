@@ -1,11 +1,13 @@
 ## About Us
 
-Information about the application and team.
+ **IMPORTANT: This content is stored in about.md in the markdown folder**
+
+- Information about your company.
+- How it started, who started it, etc.
+- Mission
+- Values
 
 ### Our Mission
 
-To provide a clean, maintainable codebase that separates concerns properly.
+Your company mission statement
 
-### Contact
-
-For more information, reach out to us at example@example.com.

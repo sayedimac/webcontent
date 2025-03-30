@@ -1,5 +1,7 @@
 ## Our Menu Items
 
+ **IMPORTANT: This content is stored in menu.md in the markdown folder**
+
 ### Appetizers
 
 - **Bruschettaaa** - Grilled bread rubbed with garlic and topped with olive oil, salt, tomato, and sometimes basil.

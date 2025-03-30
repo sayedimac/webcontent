@@ -1,11 +1,11 @@
-# Welcome to Our Application
+## Welcome to your Website!
 
-This is the homepage content that was previously embedded in app.js.
+ **IMPORTANT: This content is stored in home.md in the markdown folder**
 
-## Features
+### Features
 
 * Feature one
 * Feature two
 * Feature three
 
-[Get Started](#getting-started)
+[Get Started](https://github.com/sayedimac/webcontent)

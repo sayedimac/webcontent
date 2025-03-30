@@ -161,6 +161,26 @@ For local development:
 - `system.md`: System messages and errors
 - `index.html`: HTML shell for the application
 
+## Customizing the Look and Feel
+
+### Background Image
+
+The site comes with a fixed background image that doesn't scroll with the content. To change this:
+
+1. Replace the file `images/bg.jpg` with your own image
+2. OR modify the CSS in `css/styles.css` to point to a different image
+
+The background includes a semi-transparent white overlay to ensure text remains readable.
+
+### Styling
+
+All styling is controlled through:
+
+1. `css/styles.css` - Custom styles for the site
+2. Bootstrap 5 - For layout and components
+
+You can modify `styles.css` to change colors, fonts, spacing, and other visual elements.
+
 ## Contributing
 
 1. Fork the repository on GitHub
