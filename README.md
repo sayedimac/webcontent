@@ -2,193 +2,89 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Deploy to Azure Static Web Apps](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.StaticApp)
 
-A lightweight Single Page Application (SPA) framework that renders content from Markdown files, with GitHub-based content management and Azure Static Web Apps deployment.
+A lightweight Single Page Application (SPA) that renders content from Markdown files using GitHub-based content management.
 
-## Features
+## Key Features
 
-- 100% Content-driven approach using Markdown files
-- Simple configuration-based menu system
-- No coding required to add or change pages
-- Modern class-based JavaScript architecture
-- No external dependencies
-- Responsive design
-- Azure Static Web Apps deployment ready
+- **Content-First Approach**: All content lives in Markdown files
+- **Simple Configuration**: Menu structure in a single config file
+- **No Coding Required**: Edit content without touching code
+- **Modern Architecture**: Clean separation of content and presentation
+- **Mobile-Friendly**: Responsive design works on all devices
+- **Fast Deployment**: Ready for Azure Static Web Apps
 
 ## How It Works
 
-MarkdownUp uses a simple architecture:
+1. **Edit your content** in Markdown files (`.md`)
+2. **Configure your menu** in `config.js` 
+3. **Deploy your site** to Azure Static Web Apps
 
-1. **config.js** - Contains the menu structure and page definitions
-2. **markdown files** - Contain all content for each page
-3. **app.js** - Handles the mechanics (loading content, navigation, etc.)
+## Quick Start Guide
 
-The separation of concerns means you only need to edit content files to change your site.
+### 1. Customize Menu Structure
 
-## Content Management
-
-### Customizing the Menu and Pages
-
-The menu and available pages are configured in a single file: `js/config.js`
+Edit `js/config.js`:
 
 ```javascript
-// Pages array with [pageId, displayName] pairs
 const pages = [
-  ['home', 'Home'],
-  ['about', 'About Us'],
-  ['menu', 'Menu'],
-  ['contact', 'Contact Us']
+  ['home', 'Home'],         // [file-name, menu-text]
+  ['about', 'About Us'],    // about.md → "About Us" in menu
+  ['products', 'Products'], // Add new pages here
+  ['contact', 'Contact']
 ];
 ```
 
-To customize your menu:
+### 2. Edit Content Files
 
-1. **Add a new page**: Add a new entry to the array: `['pagename', 'Display Name']`
-2. **Remove a page**: Delete the corresponding entry from the array
-3. **Rename a menu item**: Change the second value in any pair
-4. **Reorder menu items**: Reorder the entries in the array
+Create/edit files in the `markdown/` folder:
+- `home.md` → Home page content
+- `about.md` → About page content
+- Each file corresponds to a menu item
 
-The first value in each pair is:
-- The filename for the markdown file (without .md extension)
-- The URL hash that will be used to access the page (e.g., `#/pagename`)
-
-The second value is the display text in the navigation menu.
-
-### Adding or Editing Page Content
-
-All page content lives in Markdown files in the `markdown/` directory:
-
-1. **Create a new page**:
-   - Create a file in the `markdown/` directory with the same name as the first value in your config.js entry
-   - Example: For `['products', 'Our Products']`, create `markdown/products.md`
-   - Add your content using Markdown syntax
-
-2. **Edit an existing page**:
-   - Open the corresponding Markdown file in the `markdown/` directory
-   - Make your changes using Markdown syntax
-   - Save the file
-
-3. **System Messages**:
-   - Error messages and system notifications are in `markdown/system.md`
-   - You can customize these without touching any code
-
-### Example: Adding a "Products" Page
-
-1. **Update `js/config.js`**:
-   ```javascript
-   const pages = [
-     ['home', 'Home'],
-     ['about', 'About Us'],
-     ['products', 'Our Products'],  // New page
-     ['menu', 'Menu'],
-     ['contact', 'Contact Us']
-   ];
-   ```
-
-2. **Create `markdown/products.md`**:
-   ```markdown
-   # Our Amazing Products
-
-   Discover our range of high-quality products.
-
-   ## Featured Product
-
-   Our newest release is perfect for your needs.
-
-   ## Product Categories
-
-   * Category One
-   * Category Two
-   * Category Three
-   ```
-
-3. That's it! The new page will appear in the navigation menu and is accessible via `#/products` in the URL.
-
-## GitHub-Based Workflow
-
-### One-Click Editing
-
-The best part about this system is that you can edit everything directly on GitHub:
-
-1. Navigate to your repository on GitHub
-2. Browse to the file you want to edit:
-   - `js/config.js` for menu changes
-   - `markdown/pagename.md` for content changes
-3. Click the pencil icon to edit
-4. Make your changes
-5. Commit directly to the main branch
-
-When you commit changes to the main branch, your site will automatically redeploy if you're using Azure Static Web Apps or a similar service.
-
-## Deployment
-
-### Azure Static Web Apps
-
-This project is designed to work seamlessly with Azure Static Web Apps:
+### 3. Deploy to Azure
 
 1. Click the "Deploy to Azure" button at the top of this README
-2. Follow the Azure portal instructions
-3. Connect to your GitHub repository
-4. Azure will automatically set up a GitHub Actions workflow for continuous deployment
+2. Connect to your GitHub repository
+3. Azure will automatically deploy your site
 
-Every time you push changes to your main branch, your site will automatically redeploy.
+## GitHub Workflow
+
+Edit content directly on GitHub:
+1. Navigate to `markdown/pagename.md`
+2. Click the pencil icon to edit
+3. Commit your changes
+4. Site automatically deploys
 
 ## Local Development
 
-For local development:
+```bash
+# Serve locally with Python
+python -m http.server
 
-1. Clone your repository:
-   ```bash
-   git clone https://github.com/yourusername/yourrepo.git
-   cd yourrepo
-   ```
+# Or with Node.js
+npx serve
+```
 
-2. Serve with any static web server:
-   ```bash
-   # Using Python
-   python -m http.server
-   
-   # Or with Node.js
-   npx serve
-   ```
+## Project Structure
 
-3. Open http://localhost:8000 (or the relevant port) in your browser
+- `js/app.js`: Core application logic
+- `js/config.js`: Menu configuration
+- `markdown/*.md`: Content files
+- `css/styles.css`: Custom styling
+- `index.html`: HTML shell
 
-## Technical Architecture
-
-- `app.js`: Core application logic - loads content based on configuration
-- `config.js`: Menu and page configuration
-- `markdown/`: Directory containing content files
-- `system.md`: System messages and errors
-- `index.html`: HTML shell for the application
-
-## Customizing the Look and Feel
-
-### Background Image
-
-The site comes with a fixed background image that doesn't scroll with the content. To change this:
-
-1. Replace the file `images/bg.jpg` with your own image
-2. OR modify the CSS in `css/styles.css` to point to a different image
-
-The background includes a semi-transparent white overlay to ensure text remains readable.
+## Customization
 
 ### Styling
 
-All styling is controlled through:
+- Edit `css/styles.css` for custom styles
+- Uses Bootstrap 5 for layout and components
 
-1. `css/styles.css` - Custom styles for the site
-2. Bootstrap 5 - For layout and components
+### Background
 
-You can modify `styles.css` to change colors, fonts, spacing, and other visual elements.
-
-## Contributing
-
-1. Fork the repository on GitHub
-2. Create your feature branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m 'Add some amazing feature'`
-4. Push to the branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request on GitHub
+- Replace `images/bg.jpg` with your own image
+- Or modify CSS to use a different image
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License.
