@@ -2,8 +2,6 @@
 
  **IMPORTANT: This content is stored in contact.md in the markdown folder**
 
-We'd love to hear from you! Please fill out the form below and we'll get back to you as soon as possible.
-
 
 ### Our Location
 

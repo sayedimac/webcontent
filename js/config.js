@@ -7,8 +7,8 @@
 // Pages array with display names (first entry is the page ID, second is the display name)
 const pages = [
   ['home', 'Home'],
-  ['about', 'About Us'],
+  ['about', 'About'],
   ['menu', 'Menu'],
-  ['contact', 'Contact Us']
+  ['contact', 'Contact']
 ];
 
