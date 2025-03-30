@@ -1,18 +1,18 @@
-# Our Menu Items
+## Our Menu Items
 
-## Appetizers
+### Appetizers
 
 - **Bruschettaaa** - Grilled bread rubbed with garlic and topped with olive oil, salt, tomato, and sometimes basil.
 - **Calamari** - Crispy fried squid served with marinara sauce.
 - **Spinach Artichoke Dip** - Creamy blend of cheeses, spinach, and artichokes served warm with tortilla chips.
 
-## Main Courses
+### Main Courses
 
 - **Classic Burger** - Angus beef patty with lettuce, tomato, onion, and special sauce on a brioche bun.
 - **Grilled Salmon** - Fresh Atlantic salmon with lemon butter sauce, served with seasonal vegetables.
 - **Pasta Primavera** - Linguini pasta with fresh seasonal vegetables in a light cream sauce.
 
-## Desserts
+### Desserts
 
 - **Chocolate Cake** - Rich chocolate layer cake with chocolate ganache.
 - **Cheesecake** - New York style cheesecake with berry compote.

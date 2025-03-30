@@ -1,11 +1,11 @@
-# About Us
+## About Us
 
 Information about the application and team.
 
-## Our Mission
+### Our Mission
 
 To provide a clean, maintainable codebase that separates concerns properly.
 
-## Contact
+### Contact
 
 For more information, reach out to us at example@example.com.
