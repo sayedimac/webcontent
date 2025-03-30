@@ -1,7 +1,6 @@
-# MarkdownUp SPA
+# MarkdownUp - A simple, Single Page Web Application
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Deploy to Azure Static Web Apps](https://github.com/actions/workflow-badge-action/workflows/static-web-apps-deploy/badge.svg)](https://github.com/your-repo/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Deploy to Azure Static Web Apps](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.StaticApp)
 
 A lightweight Single Page Application (SPA) framework that renders content from Markdown files, with GitHub-based content management and Azure Static Web Apps deployment.
 
@@ -60,13 +59,13 @@ A lightweight Single Page Application (SPA) framework that renders content from 
 
 ## GitHub Actions Workflow
 
-This repository includes a GitHub Actions workflow that:
+This repository does not include a GitHub Actions workflow file by default. However, if you deploy the application to Azure Static Web Apps using the "Deploy to Azure Static Web Apps" button at the top of this page, a workflow file will be automatically added to the `.github/workflows/` directory in your repository. 
 
-1. Triggers on push to the main branch
-2. Builds the application
-3. Deploys it to Azure Static Web Apps
+This workflow will:
 
-The workflow file is located at `.github/workflows/azure-static-web-apps.yml`.
+1. Trigger on changes pushed to the main branch.
+2. Build the application.
+3. Deploy it to Azure Static Web Apps.
 
 ## Local Development
 
